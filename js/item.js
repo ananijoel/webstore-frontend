@@ -51,7 +51,7 @@ fetch(`${baseurl}/api/get-item/${paramid}`, {
     item = data.data;
     pics.map((element, index) => {
         if (item[element]) {
-            pictures[index].setAttribute('src', `${baseurl}/api/get-item/${paramid}/front_pic`);
+            pictures[index].setAttribute('src', `${baseurl}/api/get-item/${paramid}/${element}`);
         } else {
             //console.log(`Element ${index} is false`);
         }
