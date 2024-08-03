@@ -1,0 +1,64 @@
+<style>
+    :host{
+        background-color: #282828;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    .main-product  {
+        height: 95%;
+        width: 50%;
+        padding: 1rem;
+        padding-right: 0.5rem;
+    }
+    .main-product a{
+        position: relative;
+        
+    }
+    .main-product img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+    .products-grid {
+        height: 95%;
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+        grid-template-rows: 1fr 1fr;   /* Deux rangées de taille égale */
+        gap: 1rem;
+        padding: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .products-grid a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .products-grid img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+    <div class="main-product">
+        <a href="#">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png" alt="Elden Ring Banner">
+        </a>
+    </div>
+    <div class="products-grid">        
+            <a href="#"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png" alt="Phone"></a>
+            <a href="#"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png" alt="Phone"></a>
+            <a href="#"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png" alt="Phone"></a>
+            <a href="#"><img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png" alt="Phone"></a>
+    </div>

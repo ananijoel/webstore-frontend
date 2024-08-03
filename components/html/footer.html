@@ -1,0 +1,136 @@
+<style>
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: fit-content;
+    width: 100vw;
+    color: white;
+    background-color: #282828;
+}
+.topFooter{
+    display: flex;
+    align-items:flex-start; 
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+    .topFooter div{
+        padding: 0;
+        margin: 30px;
+    }
+    .topFooter a:hover {
+        text-decoration: underline;
+    }
+    .topFooter div div {
+        display: flex;
+        align-items:flex-start; 
+        justify-content: flex-start;
+        flex-direction: column; 
+        height: fit-content;
+        margin: 10px 0;
+    }
+    .topFooter div:nth-child(3)  div{
+        display: flex;
+        align-items:flex-start; 
+        justify-content: flex-start;
+        flex-direction: row; 
+        margin: 10px 0;
+    }
+    .topFooter div:nth-child(2)  div a {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .topFooter div:nth-child(2)  div a img{
+        height: 30px;
+        padding: 0;
+        margin: 0 5px 5px 0;
+    }
+    
+    .topFooter a{
+        all: unset;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .footerSocial:nth-child(1){
+        height: 50px;
+        margin-right: 20px;
+    }
+    .footerSocial:nth-child(2){
+        height: 60px;
+        margin-right: 20px;
+    }
+    .footerSocial:nth-child(3){
+        height: 50px;
+        margin-right: 20px;
+    }
+
+.botFooter{
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    align-items:center; 
+    justify-content: flex-start;
+    padding: 10px;
+    border-top: 1px white solid;
+}
+.botFooter a{
+    all:unset;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0 30px;
+}
+.botFooter div{
+    margin-left: 25%;
+}
+
+</style>
+<footer>
+    <div class="topFooter" >
+        <div>
+            <h1>naviguez</h1>
+            <div>
+                <a href="../pages/#" class="footer-nav">Jeux videos</a>
+                <a href="../pages/#" class="footer-nav">Consoles</a>
+                <a href="../pages/#" class="footer-nav">Ordinateurs</a>
+                <a href="../pages/#" class="footer-nav">Smartphones</a>
+            </div>
+        </div>
+        <div>
+            <h1>Rencontrrez nous</h1>
+            <div>
+                <a href="https://goo.gl/maps/oQfVS6GqX4n18FCy8?g_st=ac" class="maps" target="_blank" >
+                    <img src="../../files/icons/map-point-add-svgrepo-com.svg" alt="" target="_blank" > Boutique
+                  </a>
+                  <a href="mailto:ananijoellanatide@gmail.com" class="mail" target="_blank" >
+                    <img src="../../files/icons/letter-opened-svgrepo-com.svg" alt=""> ananijoellanatide@gmail.com
+                  </a>
+                  <a href="tel:+22898864622" class="dial">
+                    <img src="../../files/icons/phone-svgrepo-com.svg" alt=""> 0022898864622
+                  </a>
+                  
+            </div>
+        </div>
+        <div>
+            <h1>Nos reseaux</h1>
+            <div>
+                <a class="social facebook" href="https://www.facebook.com/profile.php?id=100089304275127&mibextid=ZbWKwL" target="_blank" >
+                    <img class="footerSocial" src="/files/icons/footer/facebook-svgrepo-com.svg" alt="" target="_blank" >
+                </a>
+                <a class="social instagram" href="https://www.instagram.com/ananijoell/">
+                    <img class="footerSocial"  src="/files/icons/footer/instagram-svgrepo-com.svg" alt="" target="_blank" >
+                </a>
+                <a class="social whatsapp" href="https://wa.me/message/HPXRA4PRHSD6F1">
+                    <img class="footerSocial"  src="/files/icons/footer/whatsapp-svgrepo-com.svg" alt=""target="_blank" >
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="botFooter" >
+        <a href="../../index.html" class="footer-logo" >The Company</a>
+        <div class="policy">2024 The company. All rights reserved. privacy Policy</div>
+    </div>
+</footer>

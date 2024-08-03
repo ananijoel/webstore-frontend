@@ -1,0 +1,161 @@
+<style>
+    :host{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        width: 100%;
+
+        z-index: 100;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #282828;
+        color: white;
+        padding: 0px 20px;
+        height: 6vh;
+    }
+    header div {
+        width: 33%;
+
+    }
+    header a{
+        all: unset;
+        cursor: pointer;
+    }
+    .header-center input{
+        border: none;
+        border-radius: 50px;
+        height: 40px;
+        width: 441px;
+        padding: 0 10px;
+    }
+    .header-left a{
+        all: unset;
+        cursor: pointer;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header-right a {
+        margin: 0 20px;
+    }
+    .header-right .profile{
+        height: 40px;
+        width: 40px;
+    }
+    nav {
+        display: none;
+    }
+    nav.active{
+        width: 100vw;
+        height: 94vh;
+        background-color: #282828;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a {
+        height: 80%;
+        width: 10%;
+        background-color: #24292ef5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem;
+        font-size: 1.7rem;
+        color: wheat;
+        text-decoration: none;
+    }
+    nav p {
+        background-color: #24292e71;
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .acceuil{
+        background-image: url('/files/header/trin-wa-F6J2YEy6U8A-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .jeux{
+        background-image: url('/files/header/diego-marin-dMoBlbpDnAE-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .consoles{
+        background-image: url('/files/header/martin-katler-caNzzoxls8Q-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .pc{
+        background-image: url('/files/header/nathan-anderson-KHSPGJ3zP0M-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .smartphone{
+        background-image: url('/files/header/sara-kurfess-6lcT2kRPvnI-unsplash.jpg  ');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+
+<header>
+    <div class="zone header-left">
+        <a href=""><h1>The company</h1></a>
+    </div>
+    <div class="zone header-center">
+        <input type="text" placeholder="Cherchez un produit">
+    </div>
+    <div class="zone header-right">
+        <a>
+            <img src="/files/icons/header/hamburger-menu-svgrepo-com.svg" alt="" class="profile menu">
+        </a>
+        <a href="/pages/user/cart.html"><img src="/files/icons/header/cart-large-svgrepo-com.svg" alt="" class="profile cart " ></a>
+        <a href="#"><img src="/files/icons/header/user-circle-svgrepo-com.svg" alt="User Profile" class="profile"></a>
+    </div>
+</header>
+<nav>
+    <a href="/index.html" class="page acceuil">
+        <p>acceuil</p>
+    </a>
+    <a href="/pages/general/Jeux_videos.html" class="page jeux">
+        <p>jeux videos</p>
+    </a>
+    <a href="/pages/general/Consoles.html" class="page consoles">
+        <p>Consoles</p>
+    </a>
+    <a href="/pages/general/Ordinateurs.html" class="page pc">
+        <p>PC</p>
+    </a>
+    <a href="/pages/general/Smartphones.html" class="page smartphone">
+        <p>smartphones</p>
+    </a>
+
+</nav>

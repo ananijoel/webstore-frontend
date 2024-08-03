@@ -1,0 +1,69 @@
+<style>
+    .slide-container{
+        position: relative;
+        width: 100vw;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    .title{
+        font-size: 3rem;
+        text-decoration: none;
+        color: black;
+        padding: 40px;
+    }
+    .title:hover{
+        text-decoration: underline;
+        color: black;
+    }
+    .next img,
+    .prev img{
+        height: 50px;
+        width: 50px;
+        border: none;
+        border-radius: 50%;
+    }
+    .next{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border-radius: 50%;
+        border: none;
+    }
+    .prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-radius: 50%;
+        border: none;
+        
+    }
+
+    .card-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 100%;
+        height: fit-content;
+        max-width: 100vw;
+        transition: transform 0.5s ease;
+        padding-left: 268px;
+        flex-wrap: nowrap;
+    }
+    </style>
+    <div class="slide-container">
+        <a class="title" href="#">
+        </a>
+        <div class="card-wrapper">
+        </div>
+        <button class="next">
+            <img src="/files/icons/slider/chevron-right-svgrepo-com.svg" alt="">
+        </button>
+        <button class="prev">
+            <img src="/files/icons/slider/chevron-left-svgrepo-com.svg" alt="">
+        </button>
+    </div>
