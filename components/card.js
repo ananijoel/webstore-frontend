@@ -8,8 +8,6 @@ class Card extends HTMLElement {
             .then(response => response.text())
             .then(html => {
                 this.shadowRoot.innerHTML = html;
-
-                // Maintenant que le contenu HTML est chargé, vous pouvez accéder aux éléments
                 this.updateContent();
                 this.redirection()
             })
@@ -24,20 +22,24 @@ class Card extends HTMLElement {
             console.error('No itemid attribute provided.');
             return;
         }
-
+        baseurl="https://webstore-api-aee43d786de0.herokuapp.com"
         const img = this.shadowRoot.querySelector('.card-picture img');
         const name = this.shadowRoot.querySelector('.name');
         const price = this.shadowRoot.querySelector('.price');
         const category = this.shadowRoot.querySelector('.category');
 
-        fetch(`http://localhost:3000/api/item/${itemId}`)
+        fetch(`${baseurl}/api/get-item/${itemId}`)
             .then(response => response.json())
             .then(data => {
-                const itemData = data.data;
-                if (name) name.innerHTML = itemData.name || 'No name';
-                if (price) price.innerHTML = itemData.price || 'No price';
-                if (category) category.innerHTML = itemData.category || 'No category';
-                // Mettez également à jour l'image et autres éléments si nécessaire
+                const itemdata = data.data;
+                if (itemdata.front_pic) {
+                    img.setAttribute('src',`${baseurl}/api/get-item/${itemId}/front_pic`)
+                }
+
+                if (name) name.innerHTML = itemdata.name || 'No name';
+                if (price) price.innerHTML = itemdata.price || 'No price';
+                if (category) category.innerHTML = itemdata.category || 'No category';
+                
             })
             .catch(error => {
                 console.error('Error fetching item data:', error);

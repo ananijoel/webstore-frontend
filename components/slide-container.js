@@ -18,12 +18,14 @@ class Slide extends HTMLElement {
     }
 
     updateContent() {
-        const category = this.getAttribute('category') || 'defaultCategory';
+        
+        const category = this.getAttribute('category') || 'jeu';
         const sliderName = this.getAttribute('title') || 'Default Title';
         const limit = this.getAttribute('limit') || 12;
         const link = this.getAttribute('link') || '#';
-
-        fetch(`http://localhost:3000/api/items/category/${category}/${limit}`)
+        //console.log(category)
+        let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
+        fetch(`${baseurl}/api/get-items/category/${category}/100`)
             .then(response => response.json())
             .then(data => {
                 const title = this.shadowRoot.querySelector('.title');
@@ -32,15 +34,19 @@ class Slide extends HTMLElement {
                 title.textContent = sliderName;
                 
                 data.data.forEach(element => {
+                    //console.log(element.id)
+                    
                     const itemCard = document.createElement('wc-card');
                     itemCard.setAttribute('itemid', element.id);
                     cardWrapper.appendChild(itemCard);
+                    
                 });
                 this.sliderlogic();
             })
             .catch(error => {
                 console.error('Error fetching item data:', error);
             });
+            
     }
 
     sliderlogic() {
