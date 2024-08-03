@@ -1,4 +1,6 @@
-
+body{
+    padding-top: 6vh;
+}
 .web-map{
     background-color: #f8f8f8;
     color: rgb(32, 32, 32);
