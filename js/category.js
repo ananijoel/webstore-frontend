@@ -5,8 +5,8 @@ let title = document.querySelector('title')
 title.innerText = value
 let subcategies =[]
 let main = document.querySelector('main')
-//let baseurl = "https://webstore-api-aee43d786de0.herokuapp.com"
-let baseurl = "http://localhost:3000"
+let baseurl = "https://webstore-api-aee43d786de0.herokuapp.com"
+//let baseurl = "http://localhost:3000"
 fetch(`${baseurl}/api/get-subcategories/${value}`)
 .then(response => response.json())
 .then(data =>{

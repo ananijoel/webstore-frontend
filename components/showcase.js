@@ -14,8 +14,8 @@ class Showcase extends HTMLElement {
     }
 
     updateElements(){
-        //const baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com';
-        const baseurl = 'http://localhost:3000';
+        const baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com';
+        //const baseurl = 'http://localhost:3000';
         const img = this.shadowRoot.querySelectorAll('img');
         const a = this.shadowRoot.querySelectorAll('a');
         //console.log(a[1].getAttribute('href'))
