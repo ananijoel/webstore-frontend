@@ -1,4 +1,5 @@
-let baseurl = "https://webstore-api-aee43d786de0.herokuapp.com"
+//let baseurl = "https://webstore-api-aee43d786de0.herokuapp.com"
+let baseurl = "http://localhost:3000"
 let main = document.querySelector('main')
 
 fetch(`${baseurl}/api/get-items/category`)

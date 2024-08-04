@@ -124,6 +124,20 @@
         background-position: center;
         background-size: cover;
     }
+    @media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
+        .header-left a h1{
+            font-size: 1rem;
+        }
+        input {
+            display: none;
+        }
+        .header-right .profile{
+        height: 2rem;
+        width: 2rem;
+    }
+        
+    }
+
 </style>
 
 <header>
@@ -154,9 +168,4 @@
     <a href="/pages/general/category.html?value=accessoire" class="page pc">
         <p>PC</p>
     </a>
-    <!--
-    <a href="/pages/general/category.html?value=jeu" class="page smartphone">
-        <p>smartphones</p>
-    </a>
-    -->
 </nav>

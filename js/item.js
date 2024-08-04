@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const paramid = urlParams.get('id');
-let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
-
+//let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
+let baseurl = 'http://localhost:3000'
 let pics = ['front_pic', 'back_pic', 'left_pic', 'right_pic', 'up_pic', 'down_pic']
 let item;
 let nom = document.querySelector('.nom');
