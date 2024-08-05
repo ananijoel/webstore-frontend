@@ -17,6 +17,7 @@ class Showcase extends HTMLElement {
         const baseurl = 'https://webstoreapi-da2e54274ab2.herokuapp.com';
         //const baseurl = 'http://localhost:3000';
         const img = this.shadowRoot.querySelectorAll('img');
+        const pname = this.shadowRoot.querySelector('p')
         //console.log(a[1].getAttribute('href'))
         
         fetch(`${baseurl}/api/get-all-items/5/update/DESC`)
@@ -24,11 +25,14 @@ class Showcase extends HTMLElement {
             .then(data => {
                 data.data.map((element,index)=>{
                     if (img[index]) {
+                        pname.innerHTML = element.name
                         img[index].setAttribute('onclick', `window.location.href='/pages/general/item.html?id=${element.id}'`);
                     }
                     if ( img[index] && element.front_pic) {
+                        pname.innerHTML = element.name
                         img[index].setAttribute('src', `${baseurl}/api/get-item/${element.id}/front_pic`);
                     }else{
+                        pname.innerHTML = element.name
                         img[index].setAttribute('src', `/files/mini sorry.png`)
                     }
                 })
