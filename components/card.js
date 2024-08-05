@@ -22,8 +22,8 @@ class Card extends HTMLElement {
             console.error('No itemid attribute provided.');
             return;
         }
-        //const baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com';
-        const baseurl = 'http://localhost:3000';
+        const baseurl = 'https://webstoreapi-da2e54274ab2.herokuapp.com';
+        //const baseurl = 'http://localhost:3000';
         const img = this.shadowRoot.querySelector('.card-picture img');
         const name = this.shadowRoot.querySelector('.name');
         const price = this.shadowRoot.querySelector('.price');

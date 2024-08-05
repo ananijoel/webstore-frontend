@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const paramid = urlParams.get('id');
-//let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
-let baseurl = 'http://localhost:3000'
+let baseurl = 'https://webstoreapi-da2e54274ab2.herokuapp.com'
+//let baseurl = 'http://localhost:3000'
 let pics = ['front_pic', 'back_pic', 'left_pic', 'right_pic', 'up_pic', 'down_pic']
 let item;
 let nom = document.querySelector('.nom');
@@ -105,17 +105,6 @@ options.forEach(option =>{
     })
 })
 
-
-/*
-    data.data.map(element=>{
-        subcategies.push(element)
-    })
-    console.log(subcategies)
-    
-    subcategies.forEach(element=>{
-         main.innerHTML +=`<wc-slide-container Category="${element}/subcategory/${infosubcategory}" title="${element}" limit="20" link="/pages/general/category.html?value=${element}"></wc-slide-container>`
-    })
-*/
 
 function listrelativeItems(argument){
     fetch(`${baseurl}/api/get-categories/${argument}`)
