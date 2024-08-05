@@ -24,8 +24,8 @@ class Slide extends HTMLElement {
         const limit = this.getAttribute('limit') || 12;
         const link = this.getAttribute('link') || '#';
         //console.log(category)
-        let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
-        //let baseurl = 'http://localhost:3000'
+        //let baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com'
+        let baseurl = 'http://localhost:3000'
         fetch(`${baseurl}/api/get-items/category/${category}/100`)
             .then(response => response.json())
             .then(data => {

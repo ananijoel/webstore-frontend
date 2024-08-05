@@ -22,8 +22,8 @@ class Card extends HTMLElement {
             console.error('No itemid attribute provided.');
             return;
         }
-        const baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com';
-        //const baseurl = 'http://localhost:3000';
+        //const baseurl = 'https://webstore-api-aee43d786de0.herokuapp.com';
+        const baseurl = 'http://localhost:3000';
         const img = this.shadowRoot.querySelector('.card-picture img');
         const name = this.shadowRoot.querySelector('.name');
         const price = this.shadowRoot.querySelector('.price');
@@ -35,6 +35,8 @@ class Card extends HTMLElement {
                 const itemdata = data.data;
                 if (itemdata.front_pic) {
                     img.setAttribute('src',`${baseurl}/api/get-item/${itemId}/front_pic`)
+                }else{
+                    img.setAttribute('src',`/files/Sorry No.png`)
                 }
 
                 if (name) name.innerHTML = itemdata.name || 'No name';
@@ -54,6 +56,31 @@ class Card extends HTMLElement {
             window.location.href = `/pages/general/item.html?id=${encodeURIComponent(itemId)}`;
 
         })
+    }
+    lazyloading(){
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyElements = document.querySelectorAll('.lazy');
+        
+            let lazyLoad = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let element = entry.target;
+                        
+                        // Charger le contenu
+                        element.innerHTML += element.dataset.content;
+                        
+                        element.classList.remove('lazy');
+                        observer.unobserve(element);
+                    }
+                });
+            };
+        
+            let observer = new IntersectionObserver(lazyLoad);
+        
+            lazyElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
     }
 }
 
